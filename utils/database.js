@@ -9,6 +9,7 @@ exports.connect = () => {
     password : process.env.DB_PASSWORD,
     database : process.env.DB_BASENAME,
     charset: 'utf8_general_ci'
+    
   });
   return connection;
 }
