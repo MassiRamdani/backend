@@ -76,7 +76,7 @@ exports.login = (req, res, next) => {
     // SI : erreur SQL
     if (error) {
       res.status(500).json({ "error": error.sqlMessage });
-    
+    console.log("erreur"+error.sqlMessage );
     // SI : Utilisateur non trouvé
     } else if (results.length == 0) {
       res.status(401).json({ error: 'Cet utilisateur n\'existe pas' });
